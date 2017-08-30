@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Props Sample</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- passedData (props) equals to be passed-data  -->
+      <!-- read the bind property from right to left (from bottom to top in app.js)-->
+      <child-component v-bind:passed-data="message"></child-component>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+      Vue.component('child-component', {
+        props: ['passedData'],
+        template: '<p>{{ passedData }}</p>'
+      });
+
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue! passed from Parent Component'
+        }
+      });
+    </script>
+  </body>
+</html>
