@@ -14,10 +14,17 @@ var app = new Vue({
     // 위 flag 값을 false 로 변경하였을 때 화면에 어떤 영향을 주는지 확인해보세요.
   },
   methods: {
+    // ES6
     clickBtn() {
       console.log("hi");
-    }
+    },
+    // ES5
+    // clickBtn: function() {
+    //   console.log("hi");
+    // }
+
     // 할일 #3
     // eventMethod 를 하나 추가하고 template 에서 해당 이벤트를 실행할 수 있는 button 을 하나 추가하세요.
+    
   }
 });
